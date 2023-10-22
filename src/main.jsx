@@ -15,7 +15,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
-    loader: () => fetch('http://localhost:5000/coffee')
+    loader: () => fetch('https://coffee-store-server-meh2hmnpy-mahbubs-projects-d719349f.vercel.app/coffee')
   },
   {
     path: '/addCoffee',
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
   {
     path: '/updateCoffee/:id',
     element: <UpdateCoffee></UpdateCoffee>,
-    loader: ({params}) => fetch(`http://localhost:5000/coffee/${params.id}`)
+    loader: ({params}) => fetch(`https://coffee-store-server-meh2hmnpy-mahbubs-projects-d719349f.vercel.app/coffee/${params.id}`)
   },
   {
     path: '/signUp',
@@ -41,3 +41,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <AuthProvider><RouterProvider router={router} /></AuthProvider>
   </React.StrictMode>,
 )
+
+
+//   http://localhost:5000/coffee
